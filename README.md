@@ -1,4 +1,4 @@
-# LIC Policy Advisor (RAG)
+# LIC Policy Advisor RAG
 
 A FastAPI service that answers questions about LIC policy brochures, filters plans a customer is eligible for, and estimates premiums, with page-level citations.
 
@@ -69,7 +69,7 @@ curl -X POST localhost:8000/recommend -H "Content-Type: application/json" \
 pip install pandas pytest && pytest -q
 ```
 
-Tests cover eligibility boundaries, blank limits, incomplete rows and premium lookup using synthetic data. GitHub Actions runs them on every push, builds the Docker image, and on `main` publishes it to `ghcr.io/karthikeyanc95/lic-policy-advisor`.
+Tests cover eligibility boundaries, blank limits, incomplete rows and premium lookup using synthetic data. GitHub Actions runs them on every push, builds the Docker image, and on `main` publishes it to GitHub Container Registry as `ghcr.io/<your-github-username>/<repo-name>` (lowercased automatically).
 
 ## Evaluation
 
